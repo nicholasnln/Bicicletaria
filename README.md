@@ -40,7 +40,16 @@ O JavaScript foi utilizado para implementar a lógica das páginas, incluindo:
 
 ## Como Usar
 
-1. **Clone o Repositório**: Clone este repositório em seu computador.
-   
-   ```bash
+ **Clone o Repositório**: Clone este repositório em seu computador.
+```bash
    git clone https://github.com/seu-usuario/bicicletaria.git
+```
+ ##Tecnologias Usadas
+**HTML5**: Estruturação das páginas web.
+
+**CSS3**: Estilização das páginas com um único arquivo de estilo.
+
+**JavaScript**: Lógica do sistema, incluindo validação de login, manipulação de dados e interações com o DOM.
+   
+   
+
