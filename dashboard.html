@@ -2,22 +2,139 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - Bicicletaria</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletaria - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="menu">
-        <ul>
-            <li><a href="cadastro-produto.html">Cadastrar Produto</a></li>
-            <li><a href="#">Ver Produtos</a></li>
-            <li><a href="#">Carrinho</a></li>
-            <li><a href="#">Controle de Estoque</a></li>
-            <li><a href="#">Ordem de Serviço</a></li>
-        </ul>
-    </nav>
-    <div class="dashboard-container">
-        <h1>Bem-vindo à Bicicletaria!</h1>
-        <p>Selecione uma opção no menu para começar.</p>
+    <div class="dashboard">
+        <!-- Sidebar / Menu Principal -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.png" alt="Logo Bicicletaria" class="logo">
+                <h2>Bicicletaria</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="cadastro-produto.html" class="menu-item">
+                    <i class="fas fa-bicycle"></i> Cadastro de Produtos
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-shopping-basket"></i> Produtos
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-shopping-cart"></i> Carrinho
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-boxes"></i> Estoque
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-tools"></i> Ordens de Serviço
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+                <a href="#" class="menu-item" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <div class="top-bar">
+                <button class="toggle-menu" id="toggle-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Dashboard</h1>
+                <div class="user-info">
+                    <img src="img/user.png" alt="Usuário">
+                    <span id="username-display">Admin</span>
+                </div>
+            </div>
+
+            <!-- Cards de Resumo -->
+            <div class="dashboard-cards">
+                <div class="card dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total de Produtos</h3>
+                        <p class="card-value">124</p>
+                    </div>
+                </div>
+                <div class="card dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Vendas do Mês</h3>
+                        <p class="card-value">R$ 15.890,00</p>
+                    </div>
+                </div>
+                <div class="card dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Serviços Pendentes</h3>
+                        <p class="card-value">8</p>
+                    </div>
+                </div>
+                <div class="card dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Estoque Baixo</h3>
+                        <p class="card-value">12 itens</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atividades Recentes -->
+            <div class="card">
+                <h2 class="form-title">Atividades Recentes</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p class="activity-title">Nova venda realizada</p>
+                            <p class="activity-desc">Bicicleta Mountain Bike XTR - R$ 2.500,00</p>
+                            <p class="activity-time">Hoje, 14:30</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p class="activity-title">Ordem de serviço concluída</p>
+                            <p class="activity-desc">Manutenção completa - Cliente: João Silva</p>
+                            <p class="activity-time">Hoje, 11:15</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p class="activity-title">Novo produto adicionado ao estoque</p>
+                            <p class="activity-desc">Capacete Pro Racing - 10 unidades</p>
+                            <p class="activity-time">Ontem, 16:45</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
