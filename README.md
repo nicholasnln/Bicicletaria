@@ -44,7 +44,7 @@ O JavaScript foi utilizado para implementar a lógica das páginas, incluindo:
 ```bash
    git clone https://github.com/seu-usuario/bicicletaria.git
 ```
- ##Tecnologias Usadas
+## Tecnologias Usadas
 **HTML5**: Estruturação das páginas web.
 
 **CSS3**: Estilização das páginas com um único arquivo de estilo.
