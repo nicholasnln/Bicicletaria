@@ -1,37 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('product-list');
-    const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+    const produtos = [
+        {
+            imagem: 'imagens/bike1.png',
+            descricao: 'Bicicleta de Montanha Aro 29',
+            valor: 1200.00
+        },
+        {
+            imagem: 'imagens/bike2.jpg',
+            descricao: 'Bicicleta Urbana Retrô',
+            valor: 850.00
+        },
+        {
+            imagem: 'imagens/bike3.png',
+            descricao: 'Bicicleta Infantil com Rodinhas',
+            valor: 400.00
+        }
+    ];
 
-    if (produtos.length === 0) {
-        container.innerHTML = "<p>Nenhum produto cadastrado.</p>";
-        return;
-    }
+    const lista = document.getElementById('product-list');
 
-    produtos.forEach((produto, index) => {
+    produtos.forEach(produto => {
         const card = document.createElement('div');
-        card.classList.add('card', 'produto-card');
+        card.classList.add('product-card');
 
         card.innerHTML = `
-            <img src="${produto.imagem}" alt="${produto.descricao}" class="produto-imagem">
-            <h3>${produto.descricao}</h3>
-            <p>Fabricante: ${produto.fabricante}</p>
-            <p>Categoria: ${produto.categoria}</p>
-            <p>Preço: R$ ${produto.precoVenda.toFixed(2)}</p>
-            <button class="btn-adicionar" data-index="${index}">
-                <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
-            </button>
+            <img src="${produto.imagem}" alt="Imagem do Produto">
+            <div class="product-description">${produto.descricao}</div>
+            <div class="product-price">R$ ${produto.valor.toFixed(2)}</div>
+            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
         `;
 
-        container.appendChild(card);
-    });
-
-    container.addEventListener('click', (e) => {
-        if (e.target.closest('.btn-adicionar')) {
-            const index = e.target.closest('.btn-adicionar').dataset.index;
-            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            carrinho.push(produtos[index]);
-            localStorage.setItem('carrinho', JSON.stringify(carrinho));
-            alert('Produto adicionado ao carrinho!');
-        }
+        lista.appendChild(card);
     });
 });
