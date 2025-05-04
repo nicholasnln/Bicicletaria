@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de produtos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class ="dashboard">
+        <div class="sidebar", id="sidebar">
+            <div class="sidebar-header">
+                <img src="imagens/logo.jpg" alt="Logo Bicicletaria" class="logo">
+                <h2>Bicicletaria</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="cadastro-produto.html" class="menu-item">
+                    <i class="fas fa-bicycle"></i> Cadastro de Produtos
+                </a>
+                <a href="lista-produtos.html" class="menu-item">
+                    <i class="fas fa-shopping-basket"></i> Produtos
+                </a>
+                <a href="carrinho.html" class="menu-item">
+                    <i class="fas fa-shopping-cart"></i> Carrinho
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-boxes"></i> Estoque
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-tools"></i> Ordens de Serviço
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+                <a href="#" class="menu-item" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <button class="toggle-menu" id="toggle-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Produtos Disponiveis</h1>
+            </div>
+
+            <div class="product-list", id="product-list">
+            
+            </div>
+        </div>
+    </div>
+    <script src="js/lista-produtos.js"></script>
+</body>
+</html>

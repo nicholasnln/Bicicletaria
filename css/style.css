@@ -111,8 +111,8 @@ img {
 }
 
 .login-header .logo {
-  width: 60px; /* Antes era 80px */
-  height: 60px; /* Antes era 80px */
+  width: 150px; /* Antes era 80px */
+  height: 150px; /* Antes era 80px */
   margin-bottom: 15px;
 }
 
@@ -190,8 +190,8 @@ img {
 }
 
 .sidebar-header .logo {
-  width: 30px; /* Antes era 40px */
-  height: 30px;
+  width: 90px;
+  height: 90px;
 }
 
 .sidebar-header h2 {
