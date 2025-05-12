@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="imagens/logo.png" alt="Logo Bicicletaria" class="logo">
+                <h2>Bicicletaria</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="cadastro-produto.html" class="menu-item"><i class="fas fa-bicycle"></i> Cadastro de Produtos</a>
+                <a href="lista-produtos.html" class="menu-item"><i class="fas fa-shopping-basket"></i> Produtos</a>
+                <a href="carrinho.html" class="menu-item"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+                <a href="estoque.html" class="menu-item active"><i class="fas fa-boxes"></i> Estoque</a>
+                <a href="#" class="menu-item"><i class="fas fa-tools"></i> Ordens de Serviço</a>
+                <a href="#" class="menu-item"><i class="fas fa-cog"></i> Configurações</a>
+                <a href="login.html" class="menu-item" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <button class="toggle-menu" id="toggle-menu"><i class="fas fa-bars"></i></button>
+                <h1 class="page-title">Controle de Estoque</h1>
+                <div class="user-info">
+                    <img src="imagens/user.jpg" alt="Usuário">
+                    <span id="username-display">Usuário</span>
+                </div>
+            </div>
+
+            <!-- Tabela de Estoque -->
+            <div class="card">
+                <h2 class="form-title">Histórico de Vendas</h2>
+                <div class="table-container">
+                    <table class="tabela-estoque">
+                        <thead>
+                            <tr>
+                                <th>Data da Venda</th>
+                                <th>Item Vendido</th>
+                                <th>Descrição</th>
+                                <th>Vendedor(a)</th>
+                                <th>Forma de Pagamento</th>
+                            </tr>
+                        </thead>
+                        <tbody id="estoque-body">
+                            <!-- Conteúdo será preenchido via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <p id="mensagem-vazia" class="empty-message">Nenhuma venda registrada.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/estoque.js"></script>
+</body>
+</html>

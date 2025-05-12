@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             valor: 1200.00
         },
         {
-            imagem: 'imagens/bike2.jpg',
+            imagem: 'imagens/bike2.png',
             descricao: 'Bicicleta Urbana Retrô',
             valor: 850.00
         },
