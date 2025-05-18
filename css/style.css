@@ -1,0 +1,165 @@
+:root {
+  --bg-color: #f9f9f9;
+  --primary-color: #2d89ef;
+  --secondary-color: #ffffff;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --hover-color: #2566c0;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--primary-color);
+  color: white;
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-header .logo {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  margin: 6px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item i {
+  margin-right: 10px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background-color: var(--hover-color);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.form-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tabela th,
+.tabela td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.tabela tr:hover {
+  background-color: #f0f0f0;
+}

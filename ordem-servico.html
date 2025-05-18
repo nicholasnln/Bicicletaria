@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço - Bicicletaria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="dashboard">
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="imagens/logo.png" alt="Logo Bicicletaria" class="logo">
+            <h2>Bicicletaria</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="cadastro-produto.html" class="menu-item"><i class="fas fa-bicycle"></i> Cadastro de Produtos</a>
+            <a href="lista-produtos.html" class="menu-item"><i class="fas fa-shopping-basket"></i> Produtos</a>
+            <a href="carrinho.html" class="menu-item"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+            <a href="estoque.html" class="menu-item"><i class="fas fa-boxes"></i> Estoque</a>
+            <a href="ordem-servico.html" class="menu-item active"><i class="fas fa-tools"></i> Ordens de Serviço</a>
+            <a href="#" class="menu-item"><i class="fas fa-cog"></i> Configurações</a>
+            <a href="login.html" class="menu-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="top-bar">
+            <button class="toggle-menu" id="toggle-menu"><i class="fas fa-bars"></i></button>
+            <h1 class="page-title">Ordem de Serviço</h1>
+            <div class="user-info">
+                <img src="imagens/user.jpg" alt="Usuário">
+                <span>Admin</span>
+            </div>
+        </div>
+
+        <!-- Formulário de Nova Ordem -->
+        <div class="card">
+            <h2 class="form-title">Cadastrar Ordem de Serviço</h2>
+            <form class="form">
+                <label for="cliente">Nome do Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+
+                <label for="descricao">Descrição do Serviço:</label>
+                <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+                <label for="valor">Valor do Serviço:</label>
+                <input type="number" id="valor" name="valor" step="0.01" required>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="pendente">Pendente</option>
+                    <option value="em-andamento">Em andamento</option>
+                    <option value="concluido">Concluído</option>
+                </select>
+
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Lista de Ordens Cadastradas -->
+        <div class="card">
+            <h2 class="form-title">Ordens de Serviço Cadastradas</h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Serviço</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>Troca de corrente</td>
+                        <td>R$ 80,00</td>
+                        <td>Concluído</td>
+                        <td><a href="carrinho.html" class="btn">Cobrar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>Revisão completa</td>
+                        <td>R$ 150,00</td>
+                        <td>Pendente</td>
+                        <td><button class="btn">Atualizar</button></td>
+                    </tr>
+                    <!-- Adicione mais ordens conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/ordem-servico.js"></script>
+</body>
+</html>
